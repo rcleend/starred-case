@@ -36,7 +36,6 @@ function reset() {
   db.exec(fs.readFileSync(__dirname + '/schema.sql').toString())
 
   seed()
-  console.log('Database has been reset and seeded');
 }
 
 function seed() {

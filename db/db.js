@@ -7,7 +7,6 @@ function createDBConnection() {
       return console.error(error.message)
     }
   })
-  console.log('Connection with SQLite has been established')
   return db
 }
 
