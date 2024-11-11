@@ -8,7 +8,7 @@ A modern job search platform built with Next.js 14, Express, and SQLite. This ap
 - Search jobs by title
 - Favorite/unfavorite jobs for easy access later
 - Infinite scroll pagination
-- Little surprise on job animation
+- Little surprise on job application
 
 ## Tech Stack
 
