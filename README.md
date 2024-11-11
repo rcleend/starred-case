@@ -7,10 +7,8 @@ A modern job search platform built with Next.js 14, Express, and SQLite. This ap
 - Browse job listings with titles, descriptions, and company names
 - Search jobs by title
 - Favorite/unfavorite jobs for easy access later
-- Responsive design with dark mode support
-- Real-time job details preview
 - Infinite scroll pagination
-- Confetti animation on job application
+- Little surprise on job animation
 
 ## Tech Stack
 
