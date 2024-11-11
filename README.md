@@ -54,13 +54,13 @@ pnpm run db:reset
 In one terminal:
 
 ```bash
-npm run server:dev
+pnpm run server:dev
 ```
 
 In another terminal:
 
 ```bash
-npm run client:dev
+pnpm run client:dev
 ```
 
 The application will be available at:
