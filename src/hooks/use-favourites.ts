@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { addToFavourites, removeFromFavourites } from "@/lib/api/client";
 import { useToast } from "@/hooks/use-toast";
+import { useRouter } from "next/navigation";
 
 export const useFavourites = ({
   initialFavouriteJobIds,
@@ -9,6 +10,7 @@ export const useFavourites = ({
   initialFavouriteJobIds: number[];
 }) => {
   const { toast } = useToast();
+  const router = useRouter();
   const [favouriteJobIds, setFavouriteJobIds] = useState(
     initialFavouriteJobIds
   );
@@ -17,6 +19,7 @@ export const useFavourites = ({
     mutationFn: (jobId: number) => addToFavourites(jobId),
     onSuccess: (favouriteJobIds: number[]) => {
       setFavouriteJobIds(favouriteJobIds);
+      router.refresh();
     },
     onError: () => {
       toast({
@@ -31,6 +34,7 @@ export const useFavourites = ({
     mutationFn: (jobId: number) => removeFromFavourites(jobId),
     onSuccess: (favouriteJobIds: number[]) => {
       setFavouriteJobIds(favouriteJobIds);
+      router.refresh();
     },
     onError: () => {
       toast({
